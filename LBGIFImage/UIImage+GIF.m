@@ -37,7 +37,7 @@
     CFRelease(source);
     
     if (!duration) {
-        duration = (1.0f/10.0f)*count;
+        duration = (1.0f/5.0f)*count;
     }
     
     return [UIImage animatedImageWithImages:images duration:duration];
