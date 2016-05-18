@@ -102,7 +102,8 @@
     UIGraphicsBeginImageContextWithOptions(size, NO, 0.0); 
     
     for (UIImage* image in self.images) {
-        [image drawInRect:CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledSize.width, scaledSize.height)];
+        [image drawInRect:CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledSize.width, scaledSize.height)
+                blendMode:kCGBlendModeCopy alpha:1.0];
         UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
         
         [scaledImages addObject:newImage];
